@@ -1,0 +1,53 @@
+@import '../../variables.scss';
+
+.section-inicio {
+    position: relative;
+    height: 90%;
+}
+
+.bg-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .35;
+    overflow: hidden;
+
+    &__content{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.logo{
+    position: absolute;
+    top: 4%;
+    left: 9%;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 5rem;
+    width: 80%;
+    img{
+        height: 15rem;
+    }
+    p{
+        margin-left: 3rem;
+        color: $color-primary;
+        font-size: 4rem;
+        font-weight: 900;
+        text-align: left;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+    }
+}
+
+.button{
+    position: absolute;
+    top: 75%;
+    left: 17%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}

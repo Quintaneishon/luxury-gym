@@ -2,7 +2,7 @@
 
 .Navbar {
     width: 100%;
-    background: rgba(0, 0, 0, 0);
+    background-color: $color-black-ligth;
     padding: 1rem 3rem;
     display: flex;
     align-items: center;
@@ -10,7 +10,7 @@
 
     &__logo{
         img {
-            height: 7rem;
+            height: 3.5rem;
         }
     }
 
@@ -21,14 +21,23 @@
 
     &__item{
         color: $color-grey-light-4;
-        font-size: $tittle-font-size;
+        font-size: $subtitle-font-size;
+        font-weight: 600;
         text-transform: uppercase;
         margin: 0 2rem;
         cursor: pointer;
+        transition: all .2s;
 
-        &:hover{
-            font-weight: bolder;
+        &:hover {
+            font-weight: 700;
             color: white;
+            border-bottom: 1px solid $color-primary;
         }
     }
+}
+
+.active{
+    font-weight: 700;
+    color: white;
+    border-bottom: 1px solid $color-primary;
 }
