@@ -1,14 +1,7 @@
 import "./Navbar.scss";
 import Logo from '../../assets/images/logo.png';
-import { useState } from "react";
 
-export default function Navbar(){
-
-    const[active, setActive] = useState<string>("home")
-    
-    const navegar = ( lista: React.MouseEvent ) => {
-        setActive((lista.target as HTMLButtonElement).id);
-    }
+export default function Navbar({navegar, active}: any){
 
     return (
         <div className="Navbar">
