@@ -5,10 +5,12 @@ import { useState } from "react";
 import "./Home.scss";
 import Sucursales from "../Sucursales/Sucursales";
 import Clases from "../Clases/Clases";
+import Instalaciones from "../Instalaciones/Instalaciones";
+import About from "../About/About";
 
 
 export default function Home(){
-  const[active, setActive] = useState<string>("home")
+  const[active, setActive] = useState<string>("home");
       
   const navegar = ( lista: React.MouseEvent ) => {
       setActive((lista.target as HTMLButtonElement).id);
@@ -24,7 +26,11 @@ export default function Home(){
               ? <Sucursales />
               : (active == "clases")
                 ? <Clases />
-                : <></>
+                : (active == "instalaciones")
+                  ? <Instalaciones />
+                  : (active == "nosotros")
+                    ? <About />
+                    : <></>
         }
       </div>
   );

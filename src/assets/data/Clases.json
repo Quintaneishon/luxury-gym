@@ -1,0 +1,34 @@
+[
+    {
+        "img": "icon-pilates",
+        "title": "pilates"
+    },
+    {
+        "img": "icon-aqua",
+        "title": "aquafit"
+    },
+    {
+        "img": "icon-gap",
+        "title": "gap"
+    },
+    {
+        "img": "icon-exw",
+        "title": "exw"
+    },
+    {
+        "img": "icon-yoga",
+        "title": "yoga"
+    },
+    {
+        "img": "icon-combat",
+        "title": "box"
+    },
+    {
+        "img": "icon-bici",
+        "title": "spinning"
+    },
+    {
+        "img": "icon-more",
+        "title": "Y Más"
+    }
+]

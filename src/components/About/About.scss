@@ -1,0 +1,98 @@
+@import "../../variables.scss";
+
+.section-about{
+    position: relative;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.active-profile{
+    height: 50%;
+    display: flex;
+
+    &--left{
+        width: 40%;
+        text-align: center;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &--right{
+        width: 60%;
+        font-size: 1.6rem;
+        color: white;
+        padding: 5rem;
+        background-color: $color-primary;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.profiles{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: $title-font-size;
+    color: $color-grey-light-3;
+    margin-bottom: 3rem;
+    
+    &__item{
+        height: 100%;
+        width:  100%;
+        cursor: pointer;
+        text-align: center;
+        transition: all .3s;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &:hover{
+            background-color: $color-primary;
+        }
+    }
+}
+
+.contact{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    &__parte-1{
+        text-align: center;
+        font-size: 1.3rem;
+    }
+    
+    &__parte-2{
+        text-align: center;
+        font-size: 1.3rem;
+    }
+
+    &__parte-3{
+        display: flex;
+        margin-bottom: 1rem;
+    }
+
+}
+
+div[class^="contact__parte-3--"] {
+    svg{
+        width: 2rem;
+        height: 2rem;
+    }
+    padding: 1rem;
+}
+
+.activeProfile{
+    background-color: $color-primary;
+}

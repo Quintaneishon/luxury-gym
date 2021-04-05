@@ -1,4 +1,5 @@
 import "./Sucursales.scss";
+import sucursales from "../../assets/data/Sucursales.json";
 
 export default function Sucursales(){
     return(
@@ -11,35 +12,26 @@ export default function Sucursales(){
                     <span>No es fácil, pero nunca te rindas.</span>
                 </div>
                 <div className="top-part__sucursales">
-                    <Sucursal 
-                        img="http://assets.stickpng.com/images/585e4beacb11b227491c3399.png"
-                        title="responsive & retina" 
-                        text="Este es un texto de ejemplo"/>
-                    <Sucursal 
-                        img="http://assets.stickpng.com/images/585e4beacb11b227491c3399.png"
-                        title="responsive & retina" 
-                        text="Este es un texto de ejemplo"/>
-                    <Sucursal 
-                        img="http://assets.stickpng.com/images/585e4beacb11b227491c3399.png"
-                        title="responsive & retina" 
-                        text="Este es un texto de ejemplo"/>
+                    {
+                        sucursales.map((sucursal, index) => (
+                            <Sucursal 
+                                key={index}
+                                title={sucursal.title}
+                                text={sucursal.text}
+                            />
+                        ))
+                    }
                 </div>
             </div>
         </section>
     );
 }
 
-interface SucursalType {
-    img: string,
-    title: string,
-    text: string
-}
-
-function Sucursal( {img,title,text}: SucursalType ){
+function Sucursal( {title,text}: SucursalType ){
     return(
         <div className="sucursal">
             <div className="sucursal__img">
-                <img src={img} alt="img"/>
+                <svg className="icon"><use xlinkHref={"/sprite.svg#icon-location_on"}></use></svg>
             </div>
             <div className="sucursal__title">
                 {title}
@@ -49,4 +41,9 @@ function Sucursal( {img,title,text}: SucursalType ){
             </div>
         </div>
     );
+}
+
+interface SucursalType {
+    title: string;
+    text:  string;
 }

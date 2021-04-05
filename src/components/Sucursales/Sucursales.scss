@@ -49,12 +49,15 @@
     &__sucursales{
         width: 100%;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-evenly;
     }
 }
 
 .sucursal{
+    padding: 5rem;
+    flex-basis: 30rem;
+    
     &__img{
         margin-bottom: 2rem;
         img{
