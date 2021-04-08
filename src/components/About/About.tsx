@@ -21,7 +21,9 @@ export default function About(){
                                 ? <Valores />
                                 : (activeProfile == "foda")
                                     ? <Foda />
-                                    : <Canvas />
+                                    : (activeProfile == "tabla")
+                                        ? <Canvas />
+                                        : <Desicion />
             }
             <div className="profiles">
                 <div 
@@ -60,12 +62,15 @@ export default function About(){
                     id="tabla">
                         Canvas
                 </div>
+                <div 
+                    onClick={navegar} 
+                    className={"profiles__item " + (activeProfile == "desicion" ? "activeProfile" : "")}
+                    id="desicion">
+                        Desición
+                </div>
             </div>
             <div className="contact">
                 <div className="contact__right">
-                    <div className="title">
-                        contactar
-                    </div>
                     <div className="contact__parte-1">
                         Oficina de Comunicaciones,Luxury Fitness Club<br></br>
                         &#9990; (55) 34759283 &nbsp;&nbsp; &#x2709; LuxuryFitnessClub@gmail.com
@@ -88,7 +93,7 @@ export default function About(){
                 </div>
                 <div className="contact__left">
                     <div className="title">
-                        formulario
+                        contactanos
                     </div>
                     <div className="form">
                         <div className="input__group">
@@ -184,5 +189,17 @@ function Canvas(){
                 <img src="https://drive.google.com/uc?export=view&id=1mEeBhvypl2LamCBatVMZvU3wThKAqSEu"/>
             </div>
         </div>
+    );
+}
+
+function Desicion(){
+    return(
+        <section className="section-desicion1">
+            <div className="active-profile--all">
+                <img className="img--desicion" src="https://drive.google.com/uc?export=view&id=1-LbI3etxqhnHFhjna7Z38_Ou10ZOCokO"/>
+                <img className="img--desicion" src="https://drive.google.com/uc?export=view&id=1QdH3tBcUh0e462_D2mwkfVdQ3WSjLkzB"/>
+                <img className="img--desicion" src="https://drive.google.com/uc?export=view&id=1WKOC_ScwhvPvNxvVyiWhg2YDUa8E1uQH"/>
+            </div>
+        </section>
     );
 }

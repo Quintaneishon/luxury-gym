@@ -46,8 +46,9 @@
         img{
             height: 100%;
             position: absolute;
-            left: 5;
-            transform: translateX(-20%);
+            @include respond(tab-land){
+                transform: translateX(-20%);
+            }
             @include respond(tab-port){
                 display: none;
             }
