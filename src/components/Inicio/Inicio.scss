@@ -1,8 +1,10 @@
 @import '../../variables.scss';
+@import '../../mixins.scss';
 
 .section-inicio {
     position: relative;
-    height: 90%;
+    height: 93%;
+    width: 100%;
 }
 
 .bg-video{
@@ -19,7 +21,12 @@
         height: 100%;
         width: 100%;
         object-fit: cover;
+        
+        @include respond(tab-land){
+            width: 100%;
+        }
     }
+
 }
 
 .logo{
@@ -32,6 +39,12 @@
     width: 80%;
     img{
         height: 15rem;
+        @include respond(tab-port){
+            height: 10rem;
+        }
+        @include respond(phone){
+            height: 7rem;
+        }
     }
     p{
         margin-left: 3rem;
@@ -41,7 +54,16 @@
         text-align: left;
         -webkit-box-decoration-break: clone;
         box-decoration-break: clone;
+        
+        @include respond(tab-port){
+            font-size: 2.7rem;
+        }
+
+        @include respond(phone){
+            font-size: 2rem;
+        }
     }
+
 }
 
 .button{
@@ -50,4 +72,12 @@
     left: 17%;
     -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
+    
+    @include respond(tab-port){
+        left: 27%;
+    }
+
+    @include respond(phone){
+        left: 50%;
+    }
 }

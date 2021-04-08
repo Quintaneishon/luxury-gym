@@ -1,4 +1,5 @@
 @import '../../variables.scss';
+@import '../../mixins.scss';
 
 .Navbar {
     width: 100%;
@@ -8,15 +9,35 @@
     align-items: center;
     justify-content: space-between;
 
+    @include respond(phone){
+        justify-content: space-around;
+    }
+
     &__logo{
         img {
             height: 3.5rem;
+        }
+        @include respond(phone){
+            display: none;
         }
     }
 
     &__navs{
         list-style: none;
         display: flex;
+        align-items: center;
+
+        @include respond(tab-port){
+            display: none;
+        }
+
+        &--small{
+            align-items: center;
+            display: none;
+            @include respond(tab-port){
+                display: flex;
+            }
+        }
     }
 
     &__item{
@@ -33,6 +54,16 @@
             color: white;
             border-bottom: 1px solid $color-primary;
         }
+
+        @include respond(tab-land){
+            font-size: $regular-font-size;
+            font-weight: 600;
+        }
+
+        @include respond(phone){
+            width: 100%;
+            margin: 0 1.5rem;
+        }
     }
 }
 
@@ -40,4 +71,10 @@
     font-weight: 700;
     color: white;
     border-bottom: 1px solid $color-primary;
+}
+
+#perfil{
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: white;
 }

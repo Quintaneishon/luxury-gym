@@ -10,7 +10,7 @@ export default function Clases(){
             <div className="clases">
                 {
                     clases.map((clase, index) => (
-                        <Clase key="index" img={clase.img} title={clase.title} />
+                        <Clase key={index} img={clase.img} title={clase.title} />
                     ))
                 }
             </div>

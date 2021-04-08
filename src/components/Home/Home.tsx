@@ -1,19 +1,21 @@
-import Inicio from "../Inicio/Inicio";
-import Navbar from "../Navbar/Nabvar";
 import { useState } from "react";
 
-import "./Home.scss";
+import Inicio from "../Inicio/Inicio";
+import Navbar from "../Navbar/Nabvar";
 import Sucursales from "../Sucursales/Sucursales";
 import Clases from "../Clases/Clases";
 import Instalaciones from "../Instalaciones/Instalaciones";
 import About from "../About/About";
+import Perfil from "../Perfil/Perfil";
+
+import "./Home.scss";
 
 
 export default function Home(){
   const[active, setActive] = useState<string>("home");
       
-  const navegar = ( lista: React.MouseEvent ) => {
-      setActive((lista.target as HTMLButtonElement).id);
+  const navegar = ( id: string ) => {
+      setActive(id);
   }
 
   return (
@@ -30,7 +32,9 @@ export default function Home(){
                   ? <Instalaciones />
                   : (active == "nosotros")
                     ? <About />
-                    : <></>
+                    : (active == "perfil")
+                      ? <Perfil />
+                      : <></>
         }
       </div>
   );

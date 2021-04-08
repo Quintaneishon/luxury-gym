@@ -1,0 +1,155 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.section-perfil{
+    position: relative;
+    width: 100%;
+    height: 90%;
+}
+
+.login{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 85%;
+    width: 50%;
+    border-radius: 3px;
+    
+    display: flex;
+    align-items: stretch;
+
+    @include respond(tab-port){
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    @include respond(phone){
+        width: 90%;
+        align-items: stretch;
+    }
+    
+    &__left{
+        width: 50%;
+        position: relative;
+        overflow: hidden;
+        @include respond(tab-port){
+            height: 100%;
+        }
+
+        @include respond(phone){
+            width: 100%;
+        }
+        
+        img{
+            height: 100%;
+            position: absolute;
+            left: 5;
+            transform: translateX(-20%);
+            @include respond(tab-port){
+                display: none;
+            }
+        }
+    }
+    
+    &__right{
+        width: 50%;
+        background-color: $color-grey-light-3;
+        padding: 7rem 4em;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: stretch;
+
+        @include respond(tab-land){
+            padding: 7rem 2rem;
+        }
+
+        @include respond(tab-port){
+            margin-top: 2rem;
+            height: 100%;
+            padding: 3rem;
+        }
+
+        @include respond(phone){
+            margin-top: 2rem;
+            height: 100%;
+            width: 100%;
+        }
+        
+        &--title{
+            font-size: $title-font-size;
+        }
+        
+        &--input-group{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+input{
+    font-size: $regular-font-size;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border: none;
+    margin-bottom: 1rem;
+    background-color: white;
+    border-bottom: 3px solid transparent;
+    display: block;
+    transition: all .3s;
+    width: 90%;
+
+    &:focus{
+        outline: none;
+        -webkit-box-shadow: 0 1rem 2rem rgba($color-black, .1);
+        box-shadow: 0 1rem 2rem rgba($color-black, .1);
+        border-bottom: 3px solid $color-primary;
+    }
+    
+    &::-webkit-input-placeholder {
+        color: $color-grey-dark-3;
+    }
+}
+
+.datos{
+    height: 100%;
+    width: 100%;
+    padding: 7rem 4em;
+    background-color: $color-primary;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-evenly;
+    
+    @include respond(tab-land){
+        padding: 0rem 4em;
+    }
+    
+    &__item{
+        background-color: $color-grey-light-3;
+        padding: 1rem;
+        -webkit-box-shadow: 0 1rem 2rem rgba($color-black, .1);
+        box-shadow: 0 1rem 2rem rgba($color-black, .1);
+        color: $color-grey-dark-3;
+        font-size: 1.2rem;
+        border-radius: 3px;
+        
+        &--value{
+            color: $color-grey-dark-1;
+            font-size: $regular-font-size;
+            font-weight: 600;
+        }
+    }
+
+    &__plan{
+        span{
+            text-transform: uppercase;
+        }
+    }
+}

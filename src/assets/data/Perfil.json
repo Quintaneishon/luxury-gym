@@ -1,0 +1,10 @@
+{
+    "saldo": 3549,
+    "planes": [
+        "basic",
+        "premium",
+        "luxury",
+        "pareja",
+        "familiar"
+    ]
+}

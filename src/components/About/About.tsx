@@ -19,7 +19,9 @@ export default function About(){
                             ? <Filosofia />
                             : (activeProfile == "valores")
                                 ? <Valores />
-                                : <></>
+                                : (activeProfile == "foda")
+                                    ? <Foda />
+                                    : <Canvas />
             }
             <div className="profiles">
                 <div 
@@ -56,27 +58,48 @@ export default function About(){
                     onClick={navegar} 
                     className={"profiles__item " + (activeProfile == "tabla" ? "activeProfile" : "")}
                     id="tabla">
-                        Tabla
+                        Canvas
                 </div>
             </div>
             <div className="contact">
-                <div className="contact__parte-1">
-                    Oficina de Comunicaciones,Luxury Fitness Club<br></br>
-                    &#9990; (55) 34759283 &nbsp;&nbsp; &#x2709; LuxuryFitnessClub@gmail.com
+                <div className="contact__right">
+                    <div className="title">
+                        contactar
+                    </div>
+                    <div className="contact__parte-1">
+                        Oficina de Comunicaciones,Luxury Fitness Club<br></br>
+                        &#9990; (55) 34759283 &nbsp;&nbsp; &#x2709; LuxuryFitnessClub@gmail.com
+                    </div>
+                    <div className="contact__parte-2">Luxury Fitness Club</div>
+                    <div className="contact__parte-3">
+                        <div className="contact__parte-3--fb">
+                            <svg className="icon"><use xlinkHref={"/sprite.svg#icon-facebook"}></use></svg>
+                        </div>
+                        <div className="contact__parte-3--insta">
+                            <svg className="icon"><use xlinkHref={"/sprite.svg#icon-instagram"}></use></svg>
+                        </div>
+                        <div className="contact__parte-3--twitt">
+                            <svg className="icon"><use xlinkHref={"/sprite.svg#icon-twitter"}></use></svg>
+                        </div>
+                        <div className="contact__parte-3--yt">
+                            <svg className="icon"><use xlinkHref={"/sprite.svg#icon-youtube"}></use></svg>
+                        </div>
+                    </div>
                 </div>
-                <div className="contact__parte-2">Luxury Fitness Club</div>
-                <div className="contact__parte-3">
-                    <div className="contact__parte-3--fb">
-                        <svg className="icon"><use xlinkHref={"/sprite.svg#icon-facebook"}></use></svg>
+                <div className="contact__left">
+                    <div className="title">
+                        formulario
                     </div>
-                    <div className="contact__parte-3--insta">
-                        <svg className="icon"><use xlinkHref={"/sprite.svg#icon-instagram"}></use></svg>
-                    </div>
-                    <div className="contact__parte-3--twitt">
-                        <svg className="icon"><use xlinkHref={"/sprite.svg#icon-twitter"}></use></svg>
-                    </div>
-                    <div className="contact__parte-3--yt">
-                        <svg className="icon"><use xlinkHref={"/sprite.svg#icon-youtube"}></use></svg>
+                    <div className="form">
+                        <div className="input__group">
+                            <input className="input__form input__form--name" type="text" placeholder="nombre" />
+                            <input className="input__form input__form--email" type="text" placeholder="email"/>
+                            <input className="input__form input__form--phone" type="text" placeholder="telefono"/>
+                        </div>
+                        <div className="input__group input__group--enviar">
+                            <textarea placeholder="mensaje" className="input__form textarea" rows={5}></textarea>
+                            <button type="button" className="btn btn--white">Enviar</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -141,6 +164,24 @@ function Valores(){
             &nbsp;&nbsp;En nuestro servicio, característico de nuestra empresa.
             <strong>▪ Compromiso</strong>
             &nbsp;&nbsp;Con los resultados de nuestros socios.
+            </div>
+        </div>
+    );
+}
+function Foda(){
+    return(
+        <div className="active-profile">
+            <div className="active-profile--all">
+                <img src="https://drive.google.com/uc?export=view&id=10Kgzes11mnu_fQv_eyBENCsf5yxl8Jk6"/>
+            </div>
+        </div>
+    );
+}
+function Canvas(){
+    return(
+        <div className="active-profile">
+            <div className="active-profile--all">
+                <img src="https://drive.google.com/uc?export=view&id=1mEeBhvypl2LamCBatVMZvU3wThKAqSEu"/>
             </div>
         </div>
     );
