@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./About.scss";
+import icons from '../../assets/images/sprite.svg';
 
 export default function About(){
     const [activeProfile, setActiveProfile] = useState<string>("mision");
@@ -78,16 +79,16 @@ export default function About(){
                     <div className="contact__parte-2">Luxury Fitness Club</div>
                     <div className="contact__parte-3">
                         <div className="contact__parte-3--fb">
-                            <svg className="icon"><use xlinkHref={"/sprite.svg#icon-facebook"}></use></svg>
+                            <svg className="icon"><use xlinkHref={`${icons}#icon-facebook`}></use></svg>
                         </div>
                         <div className="contact__parte-3--insta">
-                            <svg className="icon"><use xlinkHref={"/sprite.svg#icon-instagram"}></use></svg>
+                            <svg className="icon"><use xlinkHref={`${icons}#icon-instagram`}></use></svg>
                         </div>
                         <div className="contact__parte-3--twitt">
-                            <svg className="icon"><use xlinkHref={"/sprite.svg#icon-twitter"}></use></svg>
+                            <svg className="icon"><use xlinkHref={`${icons}#icon-twitter`}></use></svg>
                         </div>
                         <div className="contact__parte-3--yt">
-                            <svg className="icon"><use xlinkHref={"/sprite.svg#icon-youtube"}></use></svg>
+                            <svg className="icon"><use xlinkHref={`${icons}#icon-youtube`}></use></svg>
                         </div>
                     </div>
                 </div>

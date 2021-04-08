@@ -1,5 +1,6 @@
 import "./Sucursales.scss";
 import sucursales from "../../assets/data/Sucursales.json";
+import icons from '../../assets/images/sprite.svg';
 
 export default function Sucursales(){
     return(
@@ -31,7 +32,7 @@ function Sucursal( {title,text}: SucursalType ){
     return(
         <div className="sucursal">
             <div className="sucursal__img">
-                <svg className="icon"><use xlinkHref={"/sprite.svg#icon-location_on"}></use></svg>
+                <svg className="icon"><use xlinkHref={`${icons}#icon-location_on`}></use></svg>
             </div>
             <div className="sucursal__title">
                 {title}

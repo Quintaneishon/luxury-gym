@@ -1,5 +1,6 @@
 import "./Clases.scss";
 import clases from "../../assets/data/Clases.json";
+import icons from '../../assets/images/sprite.svg';
 
 export default function Clases(){
     return(
@@ -28,7 +29,7 @@ function Clase({img,title}: ClaseType){
     return(
         <div className="clase">
             <div className="clase__image">
-                <svg className="icon"><use xlinkHref={"/sprite.svg#"+img}></use></svg>
+                <svg className="icon"><use xlinkHref={`${icons}#${img}`}></use></svg>
             </div>
             <div className="clase__title">
                 {title}
