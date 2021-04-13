@@ -22,7 +22,7 @@ export default function Instalaciones(){
     }
     
     return(
-        <section className="section-instalaciones">
+        <section className="section-instalaciones fade">
             {
                 instalaciones.map((instalacion,index) => (
                     <div key={index} className={"mySlides fade" + ( slideIndex == index ? " img-active" : "")}>

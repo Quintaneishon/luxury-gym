@@ -3,14 +3,17 @@ import "./About.scss";
 import icons from '../../assets/images/sprite.svg';
 
 export default function About(){
-    const [activeProfile, setActiveProfile] = useState<string>("mision");
+    const profile = localStorage.getItem("profile");
+
+    const [activeProfile, setActiveProfile] = useState<string>(profile ? profile : "mision");
 
     const navegar = ( lista: React.MouseEvent ) => {
         setActiveProfile((lista.target as HTMLButtonElement).id);
+        localStorage.setItem("profile",(lista.target as HTMLButtonElement).id);
     }
 
     return(
-        <section className="section-about">
+        <section className="section-about moveInLeft">
             {
                 (activeProfile == "mision")
                     ? <Mision />

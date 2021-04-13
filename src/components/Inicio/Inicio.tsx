@@ -3,10 +3,10 @@ import "./Inicio.scss";
 
 export default function Inicio(){
     return (
-        <section className="section-inicio">
+        <section className="section-inicio moveInLeft">
             <div className="bg-video">
                 <video className="bg-video__content" autoPlay={true} loop={true} muted={true}>
-                    <source src="https://www.googleapis.com/drive/v3/files/1p7voh9BEL9sNv0VUyePuzmEqZShmeEN3?alt=media&key=AIzaSyBB27MV5qK7Vw4Qfb5ampOG-tdoMYk1Luw" type='video/mp4'/>
+                    <source src="https://drive.google.com/uc?export=view&id=1Mrw08E-NW5wpvksnT9sZeTLs6cyoYehN" type='video/mp4'/>
                     Your browser is not supported!
                 </video>
             </div>

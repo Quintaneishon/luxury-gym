@@ -9,13 +9,17 @@ import About from "../About/About";
 import Perfil from "../Perfil/Perfil";
 
 import "./Home.scss";
+import Productos from "../Productos/Productos";
+import Popup from "../Popup/Popup";
 
 
 export default function Home(){
-  const[active, setActive] = useState<string>("home");
+  const local = localStorage.getItem("navbar");
+  const[active, setActive] = useState<string>(local ? local : "home");
       
   const navegar = ( id: string ) => {
       setActive(id);
+      localStorage.setItem("navbar",id);
   }
 
   return (
@@ -34,8 +38,11 @@ export default function Home(){
                     ? <About />
                     : (active == "perfil")
                       ? <Perfil />
-                      : <></>
+                      : (active == "productos")
+                        ? <Productos />
+                        : <></>
         }
+      <Popup />
       </div>
   );
 }

@@ -18,7 +18,7 @@ export default function Perfil(){
     }
 
     return(
-        <section className="section-perfil">
+        <section className="section-perfil moveInLeft">
             <div className="login">
                 <div className="login__left">
                     {

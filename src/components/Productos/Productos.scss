@@ -1,0 +1,52 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.section-productos{
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    @include respond(tab-port){
+        height: auto;
+    }
+}
+
+.productos{
+    padding: 2rem 3rem 0 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    &--title{
+        margin-top: 2rem;
+        font-size: 3rem;
+        text-align: center;
+        text-transform: uppercase;
+        flex-basis: 40%;
+        color: $color-primary;
+        font-weight: 700;
+
+        @include respond(tab-port){
+            font-size: $advice-font-size;
+        }
+
+        @include respond(phone){
+            font-size: $title-font-size;
+            font-weight: 500;
+        }
+    }
+}
+.producto{
+    margin: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    img {
+        width: 20rem;
+        border: solid 4px $color-primary;
+    }
+}
