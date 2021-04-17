@@ -70,7 +70,7 @@ export default function About(){
                     onClick={navegar} 
                     className={"profiles__item " + (activeProfile == "desicion" ? "activeProfile" : "")}
                     id="desicion">
-                        Desición
+                        Decisión
                 </div>
             </div>
             <div className="contact">

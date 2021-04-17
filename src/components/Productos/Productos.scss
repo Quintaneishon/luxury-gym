@@ -15,20 +15,35 @@
 }
 
 .productos{
-    padding: 2rem 3rem 0 3rem;
-    display: flex;
-    flex-wrap: wrap;
+    padding: 5rem 25rem 0 25rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
     align-items: center;
-    justify-content: center;
+
+    @include respond(tab-land){
+        padding: 5rem 10rem 0 10rem;
+    }
+    @include respond(tab-port){
+        padding: 5rem 0 0 0;
+        grid-template-columns: auto auto;
+    }
+    @include respond(phone){
+        padding: 2rem 0 0 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
 
     &--title{
-        margin-top: 2rem;
         font-size: 3rem;
         text-align: center;
         text-transform: uppercase;
         flex-basis: 40%;
         color: $color-primary;
         font-weight: 700;
+        padding: 2rem 1rem;
 
         @include respond(tab-port){
             font-size: $advice-font-size;
@@ -41,9 +56,13 @@
     }
 }
 .producto{
-    margin: 2rem 2rem;
+    height: 100%;
+    @include respond(phone){
+        height: 0;
+        width: 100%;
+    }
+    //margin: 2rem 2rem;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     img {
         width: 20rem;

@@ -15,7 +15,7 @@ export default function Productos(){
             }
             </div>
             <div className="productos--title">
-                ¡Pregunta en la sucursal por todos nuestros productos y obtén un super descuento!
+                ¡Pregunta en tu sucursal por todos nuestros productos y obtén un super descuento!
             </div>
         </section>
     );
