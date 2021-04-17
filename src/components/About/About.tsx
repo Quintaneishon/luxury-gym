@@ -181,7 +181,7 @@ function Foda(){
     return(
         <div className="active-profile">
             <div className="active-profile--all">
-                <img src="https://drive.google.com/uc?export=view&id=10Kgzes11mnu_fQv_eyBENCsf5yxl8Jk6"/>
+                <img src="https://res.cloudinary.com/ddzl7xymq/image/upload/v1618635003/ilsypy39xglyejnumehw.jpg"/>
             </div>
         </div>
     );
@@ -190,7 +190,7 @@ function Canvas(){
     return(
         <div className="active-profile">
             <div className="active-profile--all">
-                <img src="https://drive.google.com/uc?export=view&id=1mEeBhvypl2LamCBatVMZvU3wThKAqSEu"/>
+                <img src="https://res.cloudinary.com/ddzl7xymq/image/upload/v1618635004/hxx6glxhpt3owwh1yzkp.jpg"/>
             </div>
         </div>
     );
@@ -200,9 +200,9 @@ function Desicion(){
     return(
         <section className="section-desicion1">
             <div className="active-profile--all">
-                <img className="img--desicion" src="https://drive.google.com/uc?export=view&id=1-LbI3etxqhnHFhjna7Z38_Ou10ZOCokO"/>
-                <img className="img--desicion" src="https://drive.google.com/uc?export=view&id=1QdH3tBcUh0e462_D2mwkfVdQ3WSjLkzB"/>
-                <img className="img--desicion" src="https://drive.google.com/uc?export=view&id=1WKOC_ScwhvPvNxvVyiWhg2YDUa8E1uQH"/>
+                <img className="img--desicion" src="https://res.cloudinary.com/ddzl7xymq/image/upload/v1618635001/hhfrkijrvygi9edtmtq5.jpg"/>
+                <img className="img--desicion" src="https://res.cloudinary.com/ddzl7xymq/image/upload/v1618634998/tftig00uiuzlyajj0tbd.jpg"/>
+                <img className="img--desicion" src="https://res.cloudinary.com/ddzl7xymq/image/upload/v1618634998/sbv4vawrsaikgmkpewhr.jpg"/>
             </div>
         </section>
     );
