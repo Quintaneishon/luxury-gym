@@ -90,7 +90,7 @@ export default function About(){
                         <div className="contact__parte-3--twitt">
                             <svg className="icon"><use xlinkHref={`${icons}#icon-twitter`}></use></svg>
                         </div>
-                        <div className="contact__parte-3--yt">
+                        <div className="contact__parte-3--yt" onClick={() => window.open("https://youtu.be/gMKjOPkv13M")}>
                             <svg className="icon"><use xlinkHref={`${icons}#icon-youtube`}></use></svg>
                         </div>
                     </div>
